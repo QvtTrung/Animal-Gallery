@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MyCollectionsActivity"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="7dp"
+        app:cardElevation="13dp">
+
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/white"
+            android:contentDescription="@string/app_logo"
+            android:scaleType="centerCrop"
+            android:src="@drawable/logo2" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/instruction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/acme"
+        android:gravity="center"
+        android:text="@string/customize_your_collections_here"
+        android:textSize="30sp"
+        android:layout_marginBottom="30dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/btnCreateCollection"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:src="@drawable/ic_baseline_add_circle_outline_24"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10dp"
+        android:contentDescription="@string/create_collection" />
+</LinearLayout>
